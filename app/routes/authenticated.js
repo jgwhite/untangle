@@ -1,10 +1,11 @@
 import Ember from 'ember';
-import Firebase from 'firebase';
-import config from 'untangle/config/environment';
+const { inject } = Ember;
 
 export default Ember.Route.extend({
+  firebase: inject.service(),
+
   beforeModel() {
-    let firebase = new Firebase(config.firebase);
+    let firebase = this.get('firebase');
 
     if (!firebase.getAuth()) {
       this.transitionTo('authenticate');
