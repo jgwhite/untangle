@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'untangle',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
+    firebase: 'https://untangle-demo.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
